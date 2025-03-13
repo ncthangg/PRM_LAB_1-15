@@ -3,6 +3,7 @@ package com.example.logingoogle;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.util.Patterns;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -38,8 +39,15 @@ public class ForgotPasswordActivity extends AppCompatActivity {
 
         btnSendOTP.setOnClickListener(v -> {
             String email = etEmail.getText().toString().trim();
+
             if (email.isEmpty()) {
                 Toast.makeText(this, "Vui lòng nhập email!", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            // Kiểm tra định dạng email
+            if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                Toast.makeText(this, "Email không hợp lệ!", Toast.LENGTH_SHORT).show();
                 return;
             }
 
@@ -54,6 +62,7 @@ public class ForgotPasswordActivity extends AppCompatActivity {
             intent.putExtra("email", email);
             startActivity(intent);
         });
+
     }
 
 }

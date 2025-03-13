@@ -8,7 +8,7 @@ import java.sql.SQLException;
 
 public class SQLServerConnection {
 
-    private static String ip = "192.168.2.127"; //Ip cua ban
+    private static String ip = "10.87.38.162"; //Ip cua ban
 
     private static String port = "1433";
 
