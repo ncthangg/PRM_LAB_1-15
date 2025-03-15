@@ -1,11 +1,15 @@
 package com.example.pushnotification;
 
+import static com.example.pushnotification.MyNotification.CHANNEL_ID;
+
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.NotificationManagerCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -19,24 +23,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button btnSendNotification = findViewById(R.id.btn_send_notification);
-        btnSendNotification.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                sendNotification();
-            }
-        });
+        btnSendNotification.setOnClickListener(v -> sendNotification(this));
     }
-    private void sendNotification(){
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher_round);
-        Notification notification = new Notification.Builder(this).setContentTitle("Title push notifitaction")
-                .setContentText("Message push notification")
-                .setSmallIcon(R.drawable.ic_launcher_background)
+    public void sendNotification(Context context) {
+        Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(), R.drawable.khunglongicon);
+
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID)
+                .setSmallIcon(R.drawable.khunglongicon)
                 .setLargeIcon(bitmap)
-                .build();
-        NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-        if (notificationManager != null){
-            notificationManager.notify(getNotificationId(), notification);
-        }
+                .setContentTitle("Thông báo mới")
+                .setContentText("Xin chào đã lâu không gặp!!!")
+                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                .setAutoCancel(true);
+
+        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(context);
+        notificationManager.notify(getNotificationId(), builder.build());
     }
 
     private int getNotificationId(){
