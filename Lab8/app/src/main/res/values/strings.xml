@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PushNotification</string>
+    <string name="channel_name">channel1</string>
+    <string name="channel_description">description1</string>
+</resources>

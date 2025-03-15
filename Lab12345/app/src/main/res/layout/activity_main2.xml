@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign In Form"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="32dp"/>
+
+        <EditText
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:layout_below="@id/tvTitle"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:layout_below="@id/etUsername"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/tvCreateAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not account yet? Create one"
+            android:textColor="#757575"
+            android:layout_below="@id/etPassword"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"/>
+
+        <TextView
+            android:id="@+id/tvOr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-------------Or-------------"
+            android:textColor="#757575"
+            android:layout_below="@id/tvCreateAccount"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Nút Sign In -->
+        <Button
+            android:id="@+id/btnSignIn"
+            android:layout_width="391dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvOr"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="0dp"
+            android:background="@android:color/darker_gray"
+            android:text="SIGN IN"
+            android:textColor="@android:color/black" />
+
+</RelativeLayout>

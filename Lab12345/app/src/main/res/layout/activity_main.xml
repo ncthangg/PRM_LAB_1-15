@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        android:title="@string/ahihi"
+        android:titleTextColor="#FFFFFF" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="#FFFF00"
+        android:gravity="start|center_vertical"
+        android:text="Android"
+        android:textColor="#FF0000"
+        android:textSize="24sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="189dp"
+        android:background="#2196F3"
+        android:gravity="start|center_vertical"
+        android:text="PHP"
+        android:textColor="#FF4500"
+        android:textSize="24sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="307dp"
+        android:background="#008080"
+        android:gravity="start|center_vertical"
+        android:text="SQL"
+        android:textColor="#FFD700"
+        android:textSize="24sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="146dp"
+        android:background="#FFA500"
+        android:gravity="start|center_vertical"
+        android:text="PYTHON"
+        android:textColor="#00BFFF"
+        android:textSize="24sp" />
+
+</LinearLayout>
