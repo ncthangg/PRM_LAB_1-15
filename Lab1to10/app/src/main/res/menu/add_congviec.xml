@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.myapplication.Lab9.MainActivity_Lab9">
+
+    <item android:title="Them"
+        android:icon="@drawable/add"
+        app:showAsAction="always"
+        android:id="@+id/menuAdd">
+    </item>
+</menu>

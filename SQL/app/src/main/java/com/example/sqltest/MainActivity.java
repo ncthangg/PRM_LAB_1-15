@@ -26,8 +26,10 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     Button btnShowUsers, btnAddUser, btnUpdateUser, btnDeleteUser;
-    ListView listViewUsers;
+
     EditText edtFullName, edtEmail;
+
+    ListView listViewUsers;
     ArrayList<String> usersList;
     ArrayAdapter<String> adapter;
 

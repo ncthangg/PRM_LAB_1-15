@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_lab7);
 
         Button btnrequestpermission = findViewById(R.id.btn_request_permission);
         Button btnopensettingpermission = findViewById(R.id.btn_open_settings_permission);
