@@ -17,7 +17,7 @@
         android:label="LAB1-11"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Design.Light"
+        android:theme="@style/Theme.MaterialComponents.Light"
         tools:targetApi="31">
 
         <activity

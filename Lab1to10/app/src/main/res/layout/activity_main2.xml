@@ -9,19 +9,19 @@
             android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="32dp"
             android:text="Sign In Form"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="32dp"/>
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/etUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Username"
             android:layout_below="@id/tvTitle"
-            android:layout_marginTop="16dp"/>
+            android:layout_marginTop="25dp"
+            android:hint="Username" />
 
         <EditText
             android:id="@+id/etPassword"
